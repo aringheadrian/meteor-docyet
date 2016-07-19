@@ -10,7 +10,7 @@ import mstranslator from 'mstranslator';
 console.log(client = new mstranslator({
   //"b4f3e006-dd25-48af-8105-ffb29a77138f"
   client_id: "DOCYET",
-  client_secret: "mequierohacermillonario"
+  client_secret: "dHLxUoTzbQBsaJ7B5pBmtV4a/X/ToRqjiZgd8KajywM="
 }));
 
 var params = {

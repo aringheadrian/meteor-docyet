@@ -5,6 +5,8 @@ import { HistoryItems } from '../../api/history_items.js';
 import './medical_profile.html';
 
 
+  //"b4f3e006-dd25-48af-8105-ffb29a77138f"
+
 Template.MedicalCategory.helpers({
   historyItems() {
     return HistoryItems.find();

@@ -9,7 +9,7 @@ import '../../ui/components/medical_profile.js'
 FlowRouter.route('/', {
   name: 'App.home',
   action() {
-    BlazeLayout.render('AppBody',{ top: "header", main: "content" })
+    BlazeLayout.render('AppBody',{ top: "header", main: "menu" })
   }
 });
 

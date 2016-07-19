@@ -9,8 +9,8 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import mstranslator from 'mstranslator';
 console.log(client = new mstranslator({
   //"b4f3e006-dd25-48af-8105-ffb29a77138f"
-  client_id: "b4f3e006-dd25-48af-8105-ffb29a77138f",
-  client_secret: "PtRtYy0PlEx1pRQvMAmFrrXquB/QL+II3mU0Nn64A0M"
+  client_id: "DOCYET",
+  client_secret: "mequierohacermillonario"
 }));
 
 var params = {

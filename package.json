@@ -5,8 +5,8 @@
     "start": "meteor run"
   },
   "dependencies": {
-    "google-translate": "^1.0.6",
-    "meteor-node-stubs": "~0.2.0"
+    "meteor-node-stubs": "~0.2.0",
+    "mstranslator": "^2.0.8"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.1"

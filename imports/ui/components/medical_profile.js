@@ -1,5 +1,4 @@
 import { Template } from 'meteor/templating';
-
 import { HistoryItems } from '../../api/history_items.js';
 
 import './medical_profile.html';
@@ -39,6 +38,7 @@ Template.MedicalCategory.events({
 Template.historyItem.helpers({
   belongsTo() {
     return Template.parentData(1).category == this.category;
-  }
+  },
+
 })
 

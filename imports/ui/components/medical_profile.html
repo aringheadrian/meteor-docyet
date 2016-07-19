@@ -1,0 +1,32 @@
+<template name="MedicalProfile">
+  {{> MedicalCategory category="Current Diseases"}}
+  {{> MedicalCategory category="Past Diseases"}}
+  {{> MedicalCategory category="Allergies"}}
+
+</template>
+
+
+<template name="MedicalCategory">
+<h3>{{category}}</h3>
+  <form class="new-item" >
+    <input type="text" name="text" placeholder="Type to add new item" />
+    <input type="hidden" name="category" value="{{category}}">
+  </form>
+
+  <div class="ui list">
+    {{#each historyItems}}
+      {{> historyItem}}
+    {{/each}}
+  </div>
+
+</template>
+
+
+<template name="historyItem">
+<div class="item">
+  {{#if belongsTo}}
+    {{text}} <button class="ui button delete">Delete</button>
+  {{/if}}
+</div>
+
+</template>

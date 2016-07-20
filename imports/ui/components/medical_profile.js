@@ -22,21 +22,21 @@ Template.MedicalCategory.events({
     const category = e.target.category.value;
 
     const params = {
-      id: this._id,
-      text: this.text,
+      text: text,
       from: 'en',
-      to: 'es'
-    }
+      to: 'es',
+    };
 
-
-    HistoryItems.insert({
-      text,
-      createdAt: new Date(), // current time
+    const doc = {
+      text: text,
       owner: Meteor.userId(),
       category: category,
       username: Meteor.user().username,
-      translation: "translating..."
-    });
+    };
+
+
+
+    Meteor.call('HistoryItems.insert', doc, params);
 
 
     e.target.text.value='';

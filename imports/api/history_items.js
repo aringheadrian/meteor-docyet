@@ -60,6 +60,19 @@ if (Meteor.isServer) {
       }));
 
     },
+    'HistoryItems.insert'(doc, params) {
+      client.translate(params, Meteor.bindEnvironment(function(err,data) {
+        HistoryItems.insert({
+          text: doc.text,
+          createdAt: new Date(),
+          owner: doc.owner,
+          category: doc.category,
+          username: doc.username,
+          translation: data
+        });
+      }));
+
+    }
 
 
   })

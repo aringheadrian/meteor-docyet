@@ -1,5 +1,7 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { HistoryItems } from '../../api/history_items.js';
+
 
 import './medical_profile.html';
 
@@ -19,13 +21,23 @@ Template.MedicalCategory.events({
     const text = e.target.text.value;
     const category = e.target.category.value;
 
+    const params = {
+      id: this._id,
+      text: this.text,
+      from: 'en',
+      to: 'es'
+    }
+
+
     HistoryItems.insert({
       text,
       createdAt: new Date(), // current time
       owner: Meteor.userId(),
       category: category,
-      username: Meteor.user().username
+      username: Meteor.user().username,
+      translation: "translating..."
     });
+
 
     e.target.text.value='';
   },
@@ -39,6 +51,17 @@ Template.historyItem.helpers({
   belongsTo() {
     return Template.parentData(1).category == this.category;
   },
+
+  translate() {
+    const params = {
+      id: this._id,
+      text: this.text,
+      from: 'en',
+      to: 'es'
+    }
+
+    Meteor.call('HistoryItems.translate', params);
+  }
 
 })
 

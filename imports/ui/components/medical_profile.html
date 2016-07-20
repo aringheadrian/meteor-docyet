@@ -25,7 +25,8 @@
 <template name="historyItem">
 <div class="item">
   {{#if belongsTo}}
-    {{text}} <button class="ui button delete">Delete</button>
+    {{translate}}
+    {{text}} || {{translation}} <button class="ui button delete">Delete</button>
   {{/if}}
 </div>
 

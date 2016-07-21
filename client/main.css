@@ -1,1 +1,13 @@
 /* CSS declarations go here */
+/*background: rgba(0, 0, 0, 0) linear-gradient(135deg, #b8f9ef 0%, #0d796c 100%) repeat scroll 0 0; */
+
+
+
+
+body {
+  background: rgba(0, 0, 0, 0) linear-gradient(135deg, #b8f9ef 0%, #0d796c 100%) repeat scroll 0 0;
+}
+
+#__blaze-root {
+  background: transparent;
+}

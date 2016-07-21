@@ -1,4 +1,18 @@
 <template name="MedicalProfile">
+  <div class="ui form">
+    <div class="three wide field">
+      <label>Translate to:</label>
+      <select class="ui search dropdown" id="language-select">
+        <option value="">Select Country</option>
+        <option value="ar">Arab</option>
+        <option value="zh-CHT">Chinese</option>
+        <option value="de">German</option>
+        <option value="ru">Russian</option>
+        <option selected="selected" value="es">Spanish</option>
+      </select>
+      </div>
+    </div>
+
   {{> MedicalCategory category="Current Diseases"}}
   {{> MedicalCategory category="Past Diseases"}}
   {{> MedicalCategory category="Allergies"}}

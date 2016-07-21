@@ -7,26 +7,18 @@
 
 
 <template name="header">
-  <h1>DOCYET</h1>
+  <h1><a id="home">DOCYET</a></h1>
   {{> loginButtons}}
-  <div class="ui form">
-    <div class="three wide field">
-      <label>Language</label>
-      <select class="ui search dropdown" id="language-select">
-        <option value="">Select Country</option>
-        <option value="ar">Arab</option>
-        <option value="zh-CHT">Chinese</option>
-        <option value="de">German</option>
-        <option value="es">Spanish</option>
-      </select>
-      </div>
-    </div>
+
 </template>
+
 
 <template name="menu">
   <div class="container">
     <button class="ui button" id="medical-profile">Medical History</button>
-    <button class="ui button disabled" id="hospital-finder">Find Hospital</button>
+    <button class="ui button" id="hospital-finder">Find Hospital</button>
+    <button class="ui button" id="medical-phrasebook">Medical Phrasebook</button>
+    <button class="ui button" id="medical-phrasebook">Find Insurance</button>
   </div>
 </template>
 

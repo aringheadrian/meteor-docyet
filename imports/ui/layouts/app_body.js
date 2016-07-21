@@ -16,9 +16,8 @@ Template.menu.events({
 });
 
 Template.header.events({
-  'change #language-select'(e) {
+  'click #home'(e) {
     e.preventDefault();
-    lang = $(e.currentTarget).val();
-    Session.set("language", lang)
+    FlowRouter.go("/");
   }
 })

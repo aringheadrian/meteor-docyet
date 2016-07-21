@@ -9,6 +9,21 @@ import './medical_profile.html';
 
   //"b4f3e006-dd25-48af-8105-ffb29a77138f"
 
+Template.MedicalProfile.onRendered(function(){
+  $('select.dropdown')
+    .dropdown()
+  ;
+  Session.set('language', 'es')
+});
+
+Template.MedicalProfile.events({
+  'change #language-select'(e) {
+    e.preventDefault();
+    lang = $(e.currentTarget).val();
+    Session.set("language", lang)
+  },
+})
+
 Template.MedicalCategory.helpers({
   historyItems() {
     return HistoryItems.find();

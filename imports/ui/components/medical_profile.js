@@ -1,4 +1,5 @@
 import { Meteor } from 'meteor/meteor';
+import { Session } from 'meteor/session';
 import { Template } from 'meteor/templating';
 import { HistoryItems } from '../../api/history_items.js';
 
@@ -24,7 +25,7 @@ Template.MedicalCategory.events({
     const params = {
       text: text,
       from: 'en',
-      to: 'es',
+      to: Session.get("language"),
     };
 
     const doc = {
@@ -57,7 +58,7 @@ Template.historyItem.helpers({
       id: this._id,
       text: this.text,
       from: 'en',
-      to: 'es'
+      to: Session.get("language")
     }
 
     Meteor.call('HistoryItems.translate', params);

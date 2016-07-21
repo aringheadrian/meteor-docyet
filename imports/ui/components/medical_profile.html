@@ -8,12 +8,15 @@
 
 <template name="MedicalCategory">
 <h3>{{category}}</h3>
-  <form class="new-item" >
-    <input type="text" name="text" placeholder="Type to add new item" />
+  <form class="ui form new-item" >
+    <div class="inline fields">
+      <input type="text" name="text" placeholder="Type to add {{category}}" />
+      <button class="ui button green" type="submit">Add</button>
+    </div>
     <input type="hidden" name="category" value="{{category}}">
   </form>
 
-  <div class="ui list">
+  <div class="ui relaxed divided list">
     {{#each historyItems}}
       {{> historyItem}}
     {{/each}}
@@ -23,11 +26,18 @@
 
 
 <template name="historyItem">
-<div class="item">
   {{#if belongsTo}}
-    {{translate}}
-    {{text}} || {{translation}} <button class="ui button delete">Delete</button>
-  {{/if}}
-</div>
 
+    <div class="item">
+        {{translate}}
+        <button class="circular ui icon right floated button red mini delete">
+          <i class="trash icon"></i>
+          </button>
+        <div class="content">
+          <div class="header">{{text}}</div>
+          <div class="description">{{translation}}</div>
+
+        </div>
+    </div>
+    {{/if}}
 </template>

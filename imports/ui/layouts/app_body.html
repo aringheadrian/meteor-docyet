@@ -9,6 +9,18 @@
 <template name="header">
   <h1>DOCYET</h1>
   {{> loginButtons}}
+  <div class="ui form">
+    <div class="three wide field">
+      <label>Language</label>
+      <select class="ui search dropdown" id="language-select">
+        <option value="">Select Country</option>
+        <option value="ar">Arab</option>
+        <option value="zh-CHT">Chinese</option>
+        <option value="de">German</option>
+        <option value="es">Spanish</option>
+      </select>
+      </div>
+    </div>
 </template>
 
 <template name="menu">

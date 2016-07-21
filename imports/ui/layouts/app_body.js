@@ -1,6 +1,7 @@
 import './app_body.html';
 
 import { Meteor } from 'meteor/meteor';
+import { Session } from 'meteor/session';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { ReactiveDict } from 'meteor/reactive-dict';
 import { Template } from 'meteor/templating';
@@ -11,5 +12,13 @@ Template.menu.events({
   'click #medical-profile'(e) {
     e.preventDefault();
     FlowRouter.go("/medical_profile");
+  }
+});
+
+Template.header.events({
+  'change #language-select'(e) {
+    e.preventDefault();
+    lang = $(e.currentTarget).val();
+    Session.set("language", lang)
   }
 })

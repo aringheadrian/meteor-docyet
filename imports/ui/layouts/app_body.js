@@ -15,6 +15,13 @@ Template.menu.events({
   }
 });
 
+Template.menu.events({
+  'click #symptom-checker'(e) {
+    e.preventDefault();
+    FlowRouter.go("/symptom_checker");
+  }
+});
+
 Template.header.events({
   'click #home'(e) {
     e.preventDefault();
